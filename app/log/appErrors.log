@@ -1,0 +1,180 @@
+2024-11-07 15:56:39,273 - app.src.utils.hanlerError - ERROR - Excepción capturada: 'InfomacionToEncodear' object has no attribute 'valu'
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\utils\jwtUtils.py", line 25, in encode
+    key=InfomacionToEncodear.SECRETKEY.valu,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'InfomacionToEncodear' object has no attribute 'valu'. Did you mean: 'value'?
+2024-11-11 12:33:14,247 - ERROR - Excepción capturada: 'InfomacionToEncodear' object has no attribute 'valu'
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\utils\jwtUtils.py", line 25, in encode
+    key=InfomacionToEncodear.SECRETKEY.valu,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'InfomacionToEncodear' object has no attribute 'valu'. Did you mean: 'value'?
+2024-11-11 12:33:42,590 - ERROR - Excepción capturada: 'InfomacionToEncodear' object has no attribute 'valu'
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\utils\jwtUtils.py", line 25, in encode
+    key=InfomacionToEncodear.SECRETKEY.valu,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'InfomacionToEncodear' object has no attribute 'valu'. Did you mean: 'value'?
+2024-11-11 12:50:38,684 - ERROR - Excepción capturada: 'InfomacionToEncodear' object has no attribute 'valu'
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\utils\jwtUtils.py", line 26, in encode
+    algorithm=InfomacionToEncodear.ALGORITH.valu[0] # para encriptar va en formato str y para desencriptar va en lista
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'InfomacionToEncodear' object has no attribute 'valu'. Did you mean: 'value'?
+2024-11-11 12:53:03,902 - ERROR - Excepción capturada: 'InfomacionToEncodear' object has no attribute 'valu'
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\utils\jwtUtils.py", line 26, in encode
+    algorithm=InfomacionToEncodear.ALGORITH.valu[0] # para encriptar va en formato str y para desencriptar va en lista
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'InfomacionToEncodear' object has no attribute 'valu'. Did you mean: 'value'?
+2024-11-11 14:34:09,140 - ERROR - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2024-11-11 15:26:32,935 - ERROR - Excepción capturada: Not enough segments
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\utils\jwtUtils.py", line 48, in decodeToken
+    return decode(
+           ^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+2024-11-11 15:30:23,784 - ERROR - Excepción capturada: Not enough segments
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\utils\jwtUtils.py", line 48, in decodeToken
+    return decode(
+           ^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+2024-11-11 15:42:15,757 - ERROR - Excepción capturada: Not enough segments
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\utils\jwtUtils.py", line 48, in decodeToken
+    return decode(
+           ^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+2024-11-11 15:50:26,941 - ERROR - Excepción capturada: Not enough segments
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\utils\jwtUtils.py", line 48, in decodeToken
+    return decode(
+           ^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+2024-11-11 15:53:40,333 - ERROR - Excepción capturada: Not enough segments
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\utils\jwtUtils.py", line 51, in decodeToken
+    return decode(
+           ^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments

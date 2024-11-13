@@ -1,0 +1,2 @@
+En este directorio voy a guardar mis Clases que sean de tipo "abstractos" o mejor dicho voy a guardas mis clases abstractas
+o cierta estructura que se tiene que cumplir para mis clases que hereden.

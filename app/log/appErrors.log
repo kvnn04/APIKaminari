@@ -178,3 +178,605 @@ Traceback (most recent call last):
   File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 144, in decode
     raise JWTError(e)
 jose.exceptions.JWTError: Not enough segments
+2024-11-15 12:30:40,822 - ERROR - Excepción capturada: cannot access local variable 'datosRequired' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 28, in login
+    userInDb = ClienteHandler().consultarClienteInDb(username=form_data.username, pwd=form_data.password)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\schemas\cliente.py", line 127, in consultarClienteInDb
+    return datosRequired
+           ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'datosRequired' where it is not associated with a value
+2024-11-15 12:30:47,610 - ERROR - Excepción capturada: Not enough segments
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\utils\jwtUtils.py", line 50, in decodeToken
+    return decode(
+           ^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+2024-11-15 12:31:30,400 - ERROR - Excepción capturada: cannot access local variable 'datosRequired' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 28, in login
+    userInDb = ClienteHandler().consultarClienteInDb(username=form_data.username, pwd=form_data.password)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\schemas\cliente.py", line 127, in consultarClienteInDb
+    return datosRequired
+           ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'datosRequired' where it is not associated with a value
+2024-11-15 12:31:38,506 - ERROR - Excepción capturada: Not enough segments
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\utils\jwtUtils.py", line 50, in decodeToken
+    return decode(
+           ^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+2024-11-15 12:32:07,477 - ERROR - Excepción capturada: cannot access local variable 'datosRequired' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 28, in login
+    userInDb = ClienteHandler().consultarClienteInDb(username=form_data.username, pwd=form_data.password)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\schemas\cliente.py", line 127, in consultarClienteInDb
+    return datosRequired
+           ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'datosRequired' where it is not associated with a value
+2024-11-15 12:32:16,744 - ERROR - Excepción capturada: Not enough segments
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\utils\jwtUtils.py", line 50, in decodeToken
+    return decode(
+           ^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+2024-11-15 12:33:08,933 - ERROR - Excepción capturada: Not enough segments
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\utils\jwtUtils.py", line 50, in decodeToken
+    return decode(
+           ^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+2024-11-15 12:34:40,453 - ERROR - Excepción capturada: cannot access local variable 'datosRequired' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 28, in login
+    userInDb = ClienteHandler().consultarClienteInDb(username=form_data.username, pwd=form_data.password)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\schemas\cliente.py", line 127, in consultarClienteInDb
+    return datosRequired
+           ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'datosRequired' where it is not associated with a value
+2024-11-15 12:36:37,840 - ERROR - Excepción capturada: cannot access local variable 'datosRequired' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 28, in login
+    userInDb = ClienteHandler().consultarClienteInDb(username=form_data.username, pwd=form_data.password)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\schemas\cliente.py", line 127, in consultarClienteInDb
+    return datosRequired
+           ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'datosRequired' where it is not associated with a value
+2024-11-15 12:39:16,628 - ERROR - Excepción capturada: cannot access local variable 'datosRequired' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 28, in login
+    userInDb = ClienteHandler().consultarClienteInDb(username=form_data.username, pwd=form_data.password)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\schemas\cliente.py", line 127, in consultarClienteInDb
+    return datosRequired
+           ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'datosRequired' where it is not associated with a value
+2024-11-15 12:51:33,618 - ERROR - Excepción capturada: cannot access local variable 'datosRequired' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 28, in login
+    userInDb = ClienteHandler().consultarClienteInDb(username=form_data.username, pwd=form_data.password)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\schemas\cliente.py", line 127, in consultarClienteInDb
+    return datosRequired
+           ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'datosRequired' where it is not associated with a value
+2024-11-15 13:00:49,009 - ERROR - Excepción capturada: cannot access local variable 'datosRequired' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 30, in login
+    userInDb = ClienteHandler().consultarClienteInDb(username=form_data.username, pwd=form_data.password)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\schemas\cliente.py", line 127, in consultarClienteInDb
+    return datosRequired
+           ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'datosRequired' where it is not associated with a value
+2024-11-15 13:23:23,863 - ERROR - Excepción capturada: cannot access local variable 'datosRequired' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 30, in login
+    userInDb = ClienteHandler().consultarClienteInDb(username=form_data.username, pwd=form_data.password)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\schemas\cliente.py", line 127, in consultarClienteInDb
+    return datosRequired
+           ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'datosRequired' where it is not associated with a value
+2024-11-15 13:49:36,579 - ERROR - Excepción capturada: cannot access local variable 'datosRequired' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 30, in login
+    userInDb = ClienteHandler().consultarClienteInDb(username=form_data.username, pwd=form_data.password)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\schemas\cliente.py", line 128, in consultarClienteInDb
+    return datosRequired
+           ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'datosRequired' where it is not associated with a value
+2024-11-15 13:51:35,161 - ERROR - Excepción capturada: cannot access local variable 'datosRequired' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 30, in login
+    userInDb = ClienteHandler().consultarClienteInDb(username=form_data.username, pwd=form_data.password)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\schemas\cliente.py", line 128, in consultarClienteInDb
+    return datosRequired
+           ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'datosRequired' where it is not associated with a value
+2024-11-15 13:56:32,932 - ERROR - Excepción capturada: cannot access local variable 'datosRequired' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 30, in login
+    userInDb = ClienteHandler().consultarClienteInDb(username=form_data.username, pwd=form_data.password)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\schemas\cliente.py", line 128, in consultarClienteInDb
+    return datosRequired
+           ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'datosRequired' where it is not associated with a value
+2024-11-15 14:16:43,093 - ERROR - Excepción capturada: 'NoneType' object has no attribute 'id'
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 30, in login
+    userInDb = ClienteHandler().consultarClienteInDb(username=form_data.username, pwd=form_data.password)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\schemas\cliente.py", line 124, in consultarClienteInDb
+    datosRequired = {'id': cliente.id, 'username': cliente.username, 'pwd': cliente.pwd}
+                           ^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'id'
+2024-11-15 14:17:48,365 - ERROR - Excepción capturada: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 30, in login
+    userInDb = ClienteHandler().consultarClienteInDb(username=form_data.username, pwd=form_data.password)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\schemas\cliente.py", line 124, in consultarClienteInDb
+    datosRequired = {'id': cliente['id'], 'username': cliente['username'], 'pwd': cliente['pwd']}
+                           ~~~~~~~^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+2024-11-15 14:20:25,491 - ERROR - Excepción capturada: Not enough segments
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\utils\jwtUtils.py", line 51, in decodeToken
+    return decode(
+           ^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+2024-11-15 14:23:52,173 - ERROR - Excepción capturada: 401: Credenciales inválidas
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 34, in login
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 401: Credenciales inválidas
+2024-11-15 14:24:34,195 - ERROR - Excepción capturada: Not enough segments
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\utils\jwtUtils.py", line 51, in decodeToken
+    return decode(
+           ^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+2024-11-15 14:30:39,908 - ERROR - Excepción capturada: 401: Credenciales inválidas
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 34, in login
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 401: Credenciales inválidas
+2024-11-15 14:30:44,313 - ERROR - Excepción capturada: Not enough segments
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\utils\jwtUtils.py", line 51, in decodeToken
+    return decode(
+           ^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+2024-11-15 14:34:25,018 - ERROR - Excepción capturada: 401: Credenciales inválidas
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 34, in login
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 401: Credenciales inválidas
+2024-11-15 14:34:42,050 - ERROR - Excepción capturada: Not enough segments
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\utils\jwtUtils.py", line 51, in decodeToken
+    return decode(
+           ^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+2024-11-15 15:31:35,775 - ERROR - Excepción capturada: 401: Credenciales inválidas
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 34, in login
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 401: Credenciales inválidas
+2024-11-15 15:32:32,011 - ERROR - Excepción capturada: Not enough segments
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\utils\jwtUtils.py", line 51, in decodeToken
+    return decode(
+           ^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+2024-11-15 15:40:18,232 - ERROR - Excepción capturada: 401: Credenciales inválidas
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 34, in login
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 401: Credenciales inválidas
+2024-11-15 15:40:22,453 - ERROR - Excepción capturada: Not enough segments
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\utils\jwtUtils.py", line 51, in decodeToken
+    return decode(
+           ^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+2024-11-15 15:44:58,405 - ERROR - Excepción capturada: 401: Credenciales inválidas
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 34, in login
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 401: Credenciales inválidas
+2024-11-15 15:46:27,233 - ERROR - Excepción capturada: 401: Credenciales inválidas
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 34, in login
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 401: Credenciales inválidas
+2024-11-15 15:46:31,684 - ERROR - Excepción capturada: Not enough segments
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\utils\jwtUtils.py", line 51, in decodeToken
+    return decode(
+           ^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+2024-11-15 15:47:50,045 - ERROR - Excepción capturada: 401: Credenciales inválidas
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 34, in login
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 401: Credenciales inválidas
+2024-11-15 15:47:57,890 - ERROR - Excepción capturada: Not enough segments
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\utils\jwtUtils.py", line 51, in decodeToken
+    return decode(
+           ^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+2024-11-15 15:51:15,419 - ERROR - Excepción capturada: 401: Credenciales inválidas
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 34, in login
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 401: Credenciales inválidas
+2024-11-15 15:51:28,704 - ERROR - Excepción capturada: Not enough segments
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\utils\jwtUtils.py", line 51, in decodeToken
+    return decode(
+           ^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+2024-11-15 15:54:04,087 - ERROR - Excepción capturada: 401: Credenciales inválidas
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 34, in login
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 401: Credenciales inválidas
+2024-11-15 15:55:12,610 - ERROR - Excepción capturada: 401: Credenciales inválidas
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 34, in login
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 401: Credenciales inválidas
+2024-11-15 17:19:28,612 - ERROR - Excepción capturada: 401: Credenciales inválidas
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 36, in login
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 401: Credenciales inválidas
+2024-11-15 17:19:50,363 - ERROR - Excepción capturada: 'Cliente' object is not subscriptable
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\schemas\cliente.py", line 120, in consultarClienteInDb
+    datosRequired = {'id': cliente['id'], 'username': cliente['username'], 'pwd': cliente['pwd']}
+                           ~~~~~~~^^^^^^
+TypeError: 'Cliente' object is not subscriptable
+2024-11-15 17:19:50,366 - ERROR - Excepción capturada: string indices must be integers, not 'str'
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 33, in login
+    if not userInDb or form_data.password != userInDb['pwd']:
+                                             ~~~~~~~~^^^^^^^
+TypeError: string indices must be integers, not 'str'
+2024-11-15 17:37:30,793 - ERROR - Excepción capturada: 401: Credenciales inválidas
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 36, in login
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 401: Credenciales inválidas
+2024-11-15 17:38:09,851 - ERROR - Excepción capturada: 'Cliente' object is not subscriptable
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\schemas\cliente.py", line 120, in consultarClienteInDb
+    datosRequired = {'id': cliente['id'], 'username': cliente['username'], 'pwd': cliente['pwd']}
+                           ~~~~~~~^^^^^^
+TypeError: 'Cliente' object is not subscriptable
+2024-11-15 17:38:09,854 - ERROR - Excepción capturada: 401: Credenciales inválidas
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 36, in login
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 401: Credenciales inválidas
+2024-11-15 17:39:07,003 - ERROR - Excepción capturada: 'Cliente' object is not subscriptable
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\schemas\cliente.py", line 120, in consultarClienteInDb
+    datosRequired = {'id': cliente['id'], 'username': cliente['username'], 'pwd': cliente['pwd']}
+                           ~~~~~~~^^^^^^
+TypeError: 'Cliente' object is not subscriptable
+2024-11-15 17:39:07,006 - ERROR - Excepción capturada: 401: Credenciales inválidas
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 36, in login
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 401: Credenciales inválidas

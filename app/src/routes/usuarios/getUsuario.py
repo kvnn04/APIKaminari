@@ -1,7 +1,6 @@
 from typing import Annotated
-from fastapi import APIRouter, Depends
-from app.src.models.usuario import UsuarioRegister
-from app.src.schemas.cliente import ClienteHandler
+from fastapi import APIRouter, Depends,status
+from app.src.models.usuarioModels.contollerUsuario import ClienteHandler
 from app.config.DBConfig import engine
 from app.src.depends.decodeJWT import decodeJWTDepends
 
@@ -12,8 +11,12 @@ usuarioGetRoute = APIRouter()
 
 @usuarioGetRoute.get('/getUsuario')
 def getUsuarioDb(user: Annotated[str, Depends(decodeJWTDepends())]):
-    # print(type(user), 'adsfffffffffffffffffffffffffffffffffffffffffffffffffffff')        
+    # print(type(user), 'adsfffffffffffffffffffffffffffffffffffffffffffffffffffff')   
+    print(user)     
     if not user:
         return 'no existe'
-    queryInDb = ClienteHandler().consultarClienteInDb(username=user['username'], pwd=user['pwd'])
+    
+    queryInDb = ClienteHandler().crearGetClienteInDb().consultarCliente(username=user['username'], pwd=user['pwd'])
+    if not queryInDb:
+        return status.HTTP_404_NOT_FOUND
     return queryInDb

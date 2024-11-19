@@ -1,4 +1,4 @@
-from app.src.utils.jwtUtils import JWTContoller
+from app.oauthJWT.controllerJwt import JWTContoller
 from app.src.utils.hanlerError import logException
 
 

@@ -780,3 +780,239 @@ Traceback (most recent call last):
   File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 36, in login
     raise HTTPException(
 fastapi.exceptions.HTTPException: 401: Credenciales inválidas
+2024-11-16 19:19:26,507 - ERROR - Excepción capturada: GetProducto.__init__() got an unexpected keyword argument 'session'
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\schemas\producto.py", line 72, in crearGetProducto
+    producto: GetProducto = GetProducto(session=session, id=id)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: GetProducto.__init__() got an unexpected keyword argument 'session'
+2024-11-17 19:44:33,926 - ERROR - Excepción capturada: 401: Credenciales inválidas
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 39, in login
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 401: Credenciales inválidas
+2024-11-17 19:45:07,255 - ERROR - Excepción capturada: 401: Credenciales inválidas
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 39, in login
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 401: Credenciales inválidas
+2024-11-17 19:47:38,524 - ERROR - Excepción capturada: 'int' object has no attribute 'value'
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\oauthJWT\encodeJwt.py", line 15, in encodeTheStr
+    expiration = datetime.now(timezone.utc) + timedelta(minutes=InfomacionToEncodear.EXPIRETOKEN.value)
+                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'value'
+2024-11-17 19:47:43,610 - ERROR - Excepción capturada: 'str' object has no attribute 'value'
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\oauthJWT\decodeJwt.py", line 24, in decodeToken
+    key=InfomacionToEncodear.SECRETKEY.value,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'value'
+2024-11-17 19:47:56,803 - ERROR - Excepción capturada: 401: Credenciales inválidas
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 39, in login
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 401: Credenciales inválidas
+2024-11-17 19:48:55,409 - ERROR - Excepción capturada: 'int' object has no attribute 'value'
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\oauthJWT\encodeJwt.py", line 15, in encodeTheStr
+    expiration = datetime.now(timezone.utc) + timedelta(minutes=InfomacionToEncodear.EXPIRETOKEN.value)
+                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'value'
+2024-11-17 19:48:58,435 - ERROR - Excepción capturada: 'str' object has no attribute 'value'
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\oauthJWT\decodeJwt.py", line 24, in decodeToken
+    key=InfomacionToEncodear.SECRETKEY.value,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'value'
+2024-11-17 20:04:37,059 - ERROR - Excepción capturada: 401: Credenciales inválidas
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 39, in login
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 401: Credenciales inválidas
+2024-11-18 00:10:28,889 - ERROR - Excepción capturada: 'ClienteHandler' object has no attribute 'conexionDb'
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\models\usuarioModels\contollerUsuario.py", line 29, in consultarClienteInDb
+    session = self.conexionDb.abrirConexion()
+              ^^^^^^^^^^^^^^^
+AttributeError: 'ClienteHandler' object has no attribute 'conexionDb'
+2024-11-18 00:10:28,896 - ERROR - Excepción capturada: 401: Credenciales inválidas
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 39, in login
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 401: Credenciales inválidas
+2024-11-18 00:10:55,657 - ERROR - Excepción capturada: 'ClienteHandler' object has no attribute 'conexionDb'
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\models\usuarioModels\contollerUsuario.py", line 29, in consultarClienteInDb
+    session = self.conexionDb.abrirConexion()
+              ^^^^^^^^^^^^^^^
+AttributeError: 'ClienteHandler' object has no attribute 'conexionDb'
+2024-11-18 00:10:55,661 - ERROR - Excepción capturada: 401: Credenciales inválidas
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 39, in login
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 401: Credenciales inválidas
+2024-11-18 00:12:14,213 - ERROR - Excepción capturada: 'ClienteHandler' object has no attribute 'consultarClienteInDb'
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 35, in login
+    userInDb = ClienteHandler().consultarClienteInDb(username=form_data.username, pwd=form_data.password)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ClienteHandler' object has no attribute 'consultarClienteInDb'
+2024-11-18 00:13:01,523 - ERROR - Excepción capturada: 'ClienteHandler' object has no attribute 'consultarClienteInDb'
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 35, in login
+    userInDb = ClienteHandler().consultarClienteInDb(username=form_data.username, pwd=form_data.password)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ClienteHandler' object has no attribute 'consultarClienteInDb'
+2024-11-18 00:16:33,993 - ERROR - Excepción capturada: 'ClienteHandler' object has no attribute 'consultarClienteInDb'
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 35, in login
+    userInDb = ClienteHandler().consultarClienteInDb(username=form_data.username, pwd=form_data.password)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ClienteHandler' object has no attribute 'consultarClienteInDb'
+2024-11-18 00:17:47,762 - ERROR - Excepción capturada: 'ClienteHandler' object has no attribute 'consultarClienteInDb'
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 35, in login
+    userInDb = ClienteHandler().consultarClienteInDb(username=form_data.username, pwd=form_data.password)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ClienteHandler' object has no attribute 'consultarClienteInDb'
+2024-11-18 00:18:34,605 - ERROR - Excepción capturada: 'ClienteHandler' object has no attribute 'consultarClienteInDb'
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 35, in login
+    userInDb = ClienteHandler().consultarClienteInDb(username=form_data.username, pwd=form_data.password)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ClienteHandler' object has no attribute 'consultarClienteInDb'
+2024-11-18 00:21:22,740 - ERROR - Excepción capturada: 'Cliente' object is not subscriptable
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 36, in login
+    if not userInDb or form_data.password != userInDb['pwd']:
+                                             ~~~~~~~~^^^^^^^
+TypeError: 'Cliente' object is not subscriptable
+2024-11-18 00:22:13,698 - ERROR - Excepción capturada: 'Cliente' object is not subscriptable
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 37, in login
+    if not userInDb or form_data.password != userInDb['pwd']:
+                                             ~~~~~~~~^^^^^^^
+TypeError: 'Cliente' object is not subscriptable
+2024-11-18 00:24:37,554 - ERROR - Excepción capturada: Instance <Cliente at 0x1f843ac4560> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 37, in login
+    if not userInDb or form_data.password != userInDb.pwd:
+                                             ^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\attributes.py", line 566, in __get__
+    return self.impl.get(state, dict_)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\attributes.py", line 1086, in get
+    value = self._fire_loader_callables(state, key, passive)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\attributes.py", line 1116, in _fire_loader_callables
+    return state._load_expired(state, passive)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\state.py", line 803, in _load_expired
+    self.manager.expired_attribute_loader(self, toload, passive)
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\loading.py", line 1603, in load_scalar_attributes
+    raise orm_exc.DetachedInstanceError(
+sqlalchemy.orm.exc.DetachedInstanceError: Instance <Cliente at 0x1f843ac4560> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2024-11-18 00:26:33,108 - ERROR - Excepción capturada: Instance <Cliente at 0x1b416fe6b40> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 36, in login
+    print(userInDb.id, userInDb.username,'dsssssssssssssssssss')
+          ^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\attributes.py", line 566, in __get__
+    return self.impl.get(state, dict_)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\attributes.py", line 1086, in get
+    value = self._fire_loader_callables(state, key, passive)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\attributes.py", line 1116, in _fire_loader_callables
+    return state._load_expired(state, passive)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\state.py", line 803, in _load_expired
+    self.manager.expired_attribute_loader(self, toload, passive)
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\loading.py", line 1603, in load_scalar_attributes
+    raise orm_exc.DetachedInstanceError(
+sqlalchemy.orm.exc.DetachedInstanceError: Instance <Cliente at 0x1b416fe6b40> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2024-11-18 00:35:53,832 - ERROR - Excepción capturada: Instance <Cliente at 0x233d688e9c0> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\models\usuarioModels\consultarUsuario.py", line 20, in consultarCliente
+    return cliente.id
+           ^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\attributes.py", line 566, in __get__
+    return self.impl.get(state, dict_)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\attributes.py", line 1086, in get
+    value = self._fire_loader_callables(state, key, passive)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\attributes.py", line 1116, in _fire_loader_callables
+    return state._load_expired(state, passive)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\state.py", line 803, in _load_expired
+    self.manager.expired_attribute_loader(self, toload, passive)
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\loading.py", line 1603, in load_scalar_attributes
+    raise orm_exc.DetachedInstanceError(
+sqlalchemy.orm.exc.DetachedInstanceError: Instance <Cliente at 0x233d688e9c0> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2024-11-18 00:36:08,949 - ERROR - Excepción capturada: Instance <Cliente at 0x2a591f8ea50> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\models\usuarioModels\consultarUsuario.py", line 20, in consultarCliente
+    return cliente.id
+           ^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\attributes.py", line 566, in __get__
+    return self.impl.get(state, dict_)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\attributes.py", line 1086, in get
+    value = self._fire_loader_callables(state, key, passive)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\attributes.py", line 1116, in _fire_loader_callables
+    return state._load_expired(state, passive)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\state.py", line 803, in _load_expired
+    self.manager.expired_attribute_loader(self, toload, passive)
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\loading.py", line 1603, in load_scalar_attributes
+    raise orm_exc.DetachedInstanceError(
+sqlalchemy.orm.exc.DetachedInstanceError: Instance <Cliente at 0x2a591f8ea50> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2024-11-18 12:48:50,593 - ERROR - Excepción capturada: 'Cliente' object is not subscriptable
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 37, in login
+    if not userInDb or form_data.password != userInDb['pwd']:
+                                             ~~~~~~~~^^^^^^^
+TypeError: 'Cliente' object is not subscriptable
+2024-11-18 12:50:19,052 - ERROR - Excepción capturada: 'int' object has no attribute 'value'
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\oauthJWT\encodeJwt.py", line 15, in encodeTheStr
+    expiration = datetime.now(timezone.utc) + timedelta(minutes=InfomacionToEncodear.EXPIRETOKEN.value)
+                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'value'
+2024-11-18 12:50:23,500 - ERROR - Excepción capturada: Not enough segments
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\oauthJWT\decodeJwt.py", line 22, in decodeToken
+    return decode(
+           ^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+2024-11-18 13:29:34,561 - ERROR - Excepción capturada: Session.delete() got an unexpected keyword argument 'synchronize_session'
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\models\usuarioModels\deleteUsuario.py", line 14, in deleteCliente
+    session.delete(clientToDelete, synchronize_session=False)
+TypeError: Session.delete() got an unexpected keyword argument 'synchronize_session'

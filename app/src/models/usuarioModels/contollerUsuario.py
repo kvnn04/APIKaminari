@@ -5,7 +5,24 @@ from app.src.utils.hanlerError import logException
 from app.src.models.usuarioModels.consultarUsuario import GetCLienteInDB, GetCLienteInDBForUsenameAndEmail
 from app.src.models.usuarioModels.modifyUsuario import ModifyClientNombreApellidoUsername
 from app.src.models.usuarioModels.deleteUsuario import DeleteCliente
+from abc import ABC, abstractmethod
 
+class ClienteController(ABC):
+
+    def crearInstanciaRegisterCliente():
+        pass
+
+    def crearGetClienteInDb():
+        pass
+
+    def crearGetClientInDbForUsernameAndEmail():
+        pass
+    
+    def crearModifyClient():
+        pass
+
+    def crearDeleteCliente():
+        pass
 
 class ClienteHandler:
 

@@ -32,7 +32,7 @@ class ProductoIndumentaria(Base):
 
     # Relación con CategoriaOfIndumentaria
     categoria = relationship('CategoriaOfIndumentaria', back_populates='productos')
-    variantes = relationship('ProductoIndumentariaVariante', back_populates='producto')
+    variantes = relationship('ProductoIndumentariaVariante', back_populates='producto', cascade='all, delete-orphan')
 
 # Tabla ProductoIndumentariaVariante
 class ProductoIndumentariaVariante(Base):

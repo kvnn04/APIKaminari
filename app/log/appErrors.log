@@ -1016,3 +1016,122 @@ Traceback (most recent call last):
   File "C:\Users\Kevin\Desktop\KaminariApi\app\src\models\usuarioModels\deleteUsuario.py", line 14, in deleteCliente
     session.delete(clientToDelete, synchronize_session=False)
 TypeError: Session.delete() got an unexpected keyword argument 'synchronize_session'
+2024-11-21 14:05:39,688 - ERROR - Excepción capturada: 401: Credenciales inválidas
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 45, in login
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 401: Credenciales inválidas
+2024-11-21 14:13:13,934 - ERROR - Excepción capturada: 401: Credenciales inválidas
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\main.py", line 45, in login
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 401: Credenciales inválidas
+2024-11-21 15:03:24,124 - ERROR - Excepción capturada: Class 'builtins.int' is not mapped
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 3534, in delete
+    state = attributes.instance_state(instance)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute '_sa_instance_state'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\models\productoModels\deleteProducto.py", line 15, in eliminarProducto
+    session.delete(producto)
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 3536, in delete
+    raise exc.UnmappedInstanceError(instance) from err
+sqlalchemy.orm.exc.UnmappedInstanceError: Class 'builtins.int' is not mapped
+2024-11-21 15:06:06,103 - ERROR - Excepción capturada: Class 'builtins.int' is not mapped
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 3534, in delete
+    state = attributes.instance_state(instance)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute '_sa_instance_state'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\models\productoModels\deleteProducto.py", line 15, in eliminarProducto
+    session.delete(producto)
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 3536, in delete
+    raise exc.UnmappedInstanceError(instance) from err
+sqlalchemy.orm.exc.UnmappedInstanceError: Class 'builtins.int' is not mapped
+2024-11-21 15:06:52,659 - ERROR - Excepción capturada: Class 'sqlalchemy.orm.query.Query' is not mapped
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 3534, in delete
+    state = attributes.instance_state(instance)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Query' object has no attribute '_sa_instance_state'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\models\productoModels\deleteProducto.py", line 15, in eliminarProducto
+    session.delete(producto)
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 3536, in delete
+    raise exc.UnmappedInstanceError(instance) from err
+sqlalchemy.orm.exc.UnmappedInstanceError: Class 'sqlalchemy.orm.query.Query' is not mapped
+2024-11-21 15:12:06,097 - ERROR - Excepción capturada: Class 'sqlalchemy.orm.query.Query' is not mapped
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 3534, in delete
+    state = attributes.instance_state(instance)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Query' object has no attribute '_sa_instance_state'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\models\productoModels\deleteProducto.py", line 15, in eliminarProducto
+    session.delete(productoVariante)
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 3536, in delete
+    raise exc.UnmappedInstanceError(instance) from err
+sqlalchemy.orm.exc.UnmappedInstanceError: Class 'sqlalchemy.orm.query.Query' is not mapped
+2024-11-21 15:13:00,190 - ERROR - Excepción capturada: Class 'builtins.list' is not mapped
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 3534, in delete
+    state = attributes.instance_state(instance)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute '_sa_instance_state'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\models\productoModels\deleteProducto.py", line 15, in eliminarProducto
+    session.delete(productoVariante)
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 3536, in delete
+    raise exc.UnmappedInstanceError(instance) from err
+sqlalchemy.orm.exc.UnmappedInstanceError: Class 'builtins.list' is not mapped
+2024-11-22 10:46:22,992 - ERROR - Excepción capturada: For many-to-one relationship ProductoIndumentariaVariante.producto, delete-orphan cascade is normally configured only on the "one" side of a one-to-many relationship, and not on the "many" side of a many-to-one or many-to-many relationship.  To force this relationship to allow a particular "ProductoIndumentaria" object to be referenced by only a single "ProductoIndumentariaVariante" object at a time via the ProductoIndumentariaVariante.producto relationship, which would allow delete-orphan cascade to take place in this direction, set the single_parent=True flag. (Background on this error at: https://sqlalche.me/e/20/bbf0)
+Traceback (most recent call last):
+  File "C:\Users\Kevin\Desktop\KaminariApi\app\src\models\productoModels\deleteProducto.py", line 14, in eliminarProducto
+    producto = session.query(ProductoIndumentaria).filter_by(id=idProducto).first()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2952, in query
+    return self._query_cls(entities, self, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 275, in __init__
+    self._set_entities(entities)
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 288, in _set_entities
+    coercions.expect(
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\sql\coercions.py", line 388, in expect
+    insp._post_inspect
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 1253, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+                                           ^^^^^^^^^^^^^^
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\mapper.py", line 2722, in _post_inspect
+    self._check_configure()
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\mapper.py", line 2399, in _check_configure
+    _configure_registries({self.registry}, cascade=True)
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\mapper.py", line 4215, in _configure_registries
+    _do_configure_registries(registries, cascade)
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\mapper.py", line 4256, in _do_configure_registries
+    mapper._post_configure_properties()
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\mapper.py", line 2416, in _post_configure_properties
+    prop.init()
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\interfaces.py", line 589, in init
+    self.do_init()
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\relationships.py", line 1645, in do_init
+    self._check_cascade_settings(self._cascade)
+  File "C:\Users\Kevin\Desktop\KaminariApi\venv\Lib\site-packages\sqlalchemy\orm\relationships.py", line 1988, in _check_cascade_settings
+    raise sa_exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: For many-to-one relationship ProductoIndumentariaVariante.producto, delete-orphan cascade is normally configured only on the "one" side of a one-to-many relationship, and not on the "many" side of a many-to-one or many-to-many relationship.  To force this relationship to allow a particular "ProductoIndumentaria" object to be referenced by only a single "ProductoIndumentariaVariante" object at a time via the ProductoIndumentariaVariante.producto relationship, which would allow delete-orphan cascade to take place in this direction, set the single_parent=True flag. (Background on this error at: https://sqlalche.me/e/20/bbf0)

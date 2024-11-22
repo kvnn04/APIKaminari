@@ -7,7 +7,7 @@ from typing import Annotated
 from app.src.utils.hanlerError import logException
 from app.src.depends.decodeJWT import decodeJWTDepends
 from app.src.models.usuarioModels.contollerUsuario import ClienteHandler
-from app.src.models.productoModels.producto import ProductHandler
+from app.src.models.productoModels.productoController import ProductHandler
 from fastapi import HTTPException, status
 
 from app.src.routes.getDBRoute import getDbRoute
@@ -15,7 +15,10 @@ from app.src.routes.usuarios.postUsuario import usuarioPostRoute
 from app.src.routes.usuarios.getUsuario import usuarioGetRoute
 from app.src.routes.usuarios.updateUsuario import usuarioUpdateRoute
 from app.src.routes.usuarios.deleteUsuario import usuarioDeleteRoute
-from app.src.routes.productos.getProductoRoute import productoRoute
+from app.src.routes.productos.getProductoRoute import getProductoRoute
+from app.src.routes.productos.postProductoRoute import postProductoRoute
+from app.src.routes.productos.putProductoRoute import putProductoRoute
+from app.src.routes.productos.deleteProductoRoute import deleteProductoRoute
 
 from app.oauthJWT.controllerJwt import JWTContoller
 
@@ -25,7 +28,10 @@ app.include_router(prefix='/post/usuario',router=usuarioPostRoute, tags=['Usuari
 app.include_router(prefix='/get/usuario',router=usuarioGetRoute, tags=['Usuario'])
 app.include_router(prefix='/put/usuario',router=usuarioUpdateRoute, tags=['Usuario'])
 app.include_router(prefix='/delete/usuario',router=usuarioDeleteRoute, tags=['Usuario'])
-app.include_router(prefix='/get/producto',router=productoRoute, tags=['Producto'])
+app.include_router(prefix='/get/producto',router=getProductoRoute, tags=['Producto'])
+app.include_router(prefix='/post/producto',router=postProductoRoute, tags=['Producto'])
+app.include_router(prefix='/put/producto',router=putProductoRoute, tags=['Producto'])
+app.include_router(prefix='/delete/producto',router=deleteProductoRoute, tags=['Producto'])
 
 
 # ------------------------------------------------------------------------------------- # login token

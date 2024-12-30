@@ -26,3 +26,5 @@ class EncodeToken(BaseModel):
         except Exception as e:
             logException(e)
             return 'hubo un error en la Clase EncodeToken'
+        
+    

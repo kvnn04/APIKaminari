@@ -22,7 +22,7 @@ class DecodeToken(BaseModel):
                 return decode(
                     token,
                     key=InfomacionToEncodear.SECRETKEY,
-                    algorithms=InfomacionToEncodear.ALGORITH
+                    algorithms=InfomacionToEncodear.ALGORITH,
                 )
             return None
         except JWEInvalidAuth as e:

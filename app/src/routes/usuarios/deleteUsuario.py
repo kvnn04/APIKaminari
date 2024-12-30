@@ -1,6 +1,6 @@
 from typing import Annotated
 from fastapi import APIRouter, Depends
-from app.src.models.usuarioModels.createUsuario import UsuarioRegister
+# from app.src.models.usuarioModels.createUsuario import Usuario
 from app.src.models.usuarioModels.deleteUsuario import DeleteCliente
 from app.src.models.usuarioModels.contollerUsuario import ClienteHandler
 from app.config.DBConfig import engine

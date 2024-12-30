@@ -2,7 +2,7 @@ from app.src.models.dbConect import ConexionDb
 from app.src.models.usuarioModels.createUsuario import CreateRegisterCliente
 from app.src.schemas.cliente import Cliente
 from app.src.utils.hanlerError import logException
-from app.src.models.usuarioModels.consultarUsuario import GetCLienteInDB, GetCLienteInDBForUsenameAndEmail
+from app.src.models.usuarioModels.consultarUsuario import GetCLienteInDB, GetCLienteInDBForUsenameOrEmail
 from app.src.models.usuarioModels.modifyUsuario import ModifyClientNombreApellidoUsername
 from app.src.models.usuarioModels.deleteUsuario import DeleteCliente
 from abc import ABC, abstractmethod
@@ -38,7 +38,7 @@ class ClienteHandler:
         return GetCLienteInDB()
     
     def crearGetClientInDbForUsernameAndEmail(self):
-        return GetCLienteInDBForUsenameAndEmail()
+        return GetCLienteInDBForUsenameOrEmail()
     
     def crearModifyClient(self):
         return ModifyClientNombreApellidoUsername()

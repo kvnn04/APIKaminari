@@ -2,7 +2,7 @@ from typing import Literal
 from app.src.models.dbConect import ConexionDb
 from app.src.schemas.producto import ProductoIndumentaria, ProductoIndumentariaVariante
 from app.src.utils.hanlerError import logException
-from app.src.models.productoModels.readProductoModels import ReadIfProductoIndumentaria
+# from app.src.models.productoModels.readProductoModels import ReadIfProductoIndumentaria
 
 class CrearProductoIndumentariaInDb:
     def crearProducto(self, nombre: str, precio: float, descripcion: str, idCategoria: Literal[1,2]) -> bool|None:

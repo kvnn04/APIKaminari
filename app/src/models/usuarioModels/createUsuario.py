@@ -1,7 +1,7 @@
 from pydantic import BaseModel, model_validator, field_validator, Field
 
 from app.src.models.dbConect import ConexionDb
-from app.src.models.usuarioModels.consultarUsuario import GetCLienteInDBForUsenameAndEmail
+from app.src.models.usuarioModels.consultarUsuario import GetCLienteInDBForUsenameOrEmail
 from app.src.schemas.cliente import Cliente
 from app.src.utils.hanlerError import logException
 # from app.src.models.usuarioModels.contollerUsuario import ClienteHandler
@@ -12,7 +12,7 @@ class UsuarioRegister(BaseModel):
     apellido: None|str = Field(None, max_length=50)
     username: str = Field(..., max_length=50)
     email: str = Field(..., max_length=50)
-    pwd: str = Field(..., min_length=8)                       # Esto messirve para el futuro, su/ cuando lo veo con lo que hace home voy a entender, su
+    pwd: str = Field(..., min_length=1)                       # Esto messirve para el futuro, su/ cuando lo veo con lo que hace home voy a entender, su
     verifyPwd: str = Field(...)
     
     @model_validator(mode="after")
@@ -48,15 +48,16 @@ class CreateRegisterCliente:
 
     def crearCliente(self, nombre: str, apellido: str, username: str, email: str, pwd: str):
         # Crear un nuevo cliente
+        verifyClientInDb = GetCLienteInDBForUsenameOrEmail().consultarClienteForUsernameOrEmail(username=username, email=email)
+        print(verifyClientInDb)
+        if verifyClientInDb is True:
+            return False
         try:
             conexionDB = ConexionDb()
             session = conexionDB.abrirConexion()
 
-            if not session:
+            if session is None:
                 return None
-            if GetCLienteInDBForUsenameAndEmail().consultarClienteForUsernameAndEmail(username=username, email=email):
-                return False
-            
             nuevoCliente: Cliente = Cliente(
                 nombre=nombre,
                 apellido=apellido,

@@ -1,4 +1,4 @@
-from app.src.models.productoModels.readProductoModels import ReadProductoIndumentaria, ReadIfProductoIndumentaria,ReadProductoIndumentariaIfExiste
+from app.src.models.productoModels.readProductoModels import ReadProductoIndumentaria
 from app.src.models.productoModels.createProducto import CrearProductoIndumentariaInDb, CreateProductoIndumentariaVarianteInDb
 from app.src.models.productoModels.modifyProducto import ModifiStockProductoIndumentariaVarianteInDb
 from app.src.models.productoModels.deleteProducto import EliminarProductoIndumentariaInDb
@@ -17,10 +17,6 @@ class ProductoController(ABC):
     @abstractmethod
     def crearProductoVarianteInDb():
         pass 
-    # @staticmethod
-    # @abstractmethod
-    # def crearIfProductoIndumentaria():
-    #     pass
     
     @abstractmethod
     def crearModifyStockProductoIndumentaria():
@@ -43,9 +39,6 @@ class ProductHandler(ProductoController):
     
     def crearProductoVarianteInDb(self) -> CreateProductoIndumentariaVarianteInDb:
         return CreateProductoIndumentariaVarianteInDb()
-    
-    # def crearIfProductoIndumentaria(self):
-    #     return ReadIfProductoIndumentaria()
     
     def crearModifyStockProductoIndumentaria(self):
         return ModifiStockProductoIndumentariaVarianteInDb()

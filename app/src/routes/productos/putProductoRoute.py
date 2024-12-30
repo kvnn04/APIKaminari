@@ -10,7 +10,7 @@ with engine.connect() as connection:
 
 putProductoRoute: APIRouter = APIRouter()
 
-@putProductoRoute.put('modifyStockProducto')
+@putProductoRoute.put('/modifyStockProducto')
 def modifiStock(idProductoIndumentaria: int, talle: Literal['s', 'm', 'l', 'xl', 'xxl', 'xxxl'], color: str, nuevoStock):
     modifi = ProductHandler().crearModifyStockProductoIndumentaria().modifiStockVariante(idIndumentariaProduct=idProductoIndumentaria, talle=talle, color=color, nuevoStock=nuevoStock)
     if not modifi:

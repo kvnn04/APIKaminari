@@ -43,3 +43,14 @@ dia: 22/11/2024
         Tengo que tengo que volver a revisar mis diagramas de clases pero ya implementando los patrones GRASP o SOLID.
         Porque todavia voy por la API, dioss.
 
+dia 30/12/2024:
+    termine mi de armar mi db
+    autorizacion, autenticacion
+    
+    AUNQUE SEA TERMINE MI PRIMERA VERSION DE LA API. ya funciona todo en la parte de flask, asi que creo que si seria una primera version
+    
+    me costo muchisimo, pero voy a seguir el ritmo que estoy teniendo
+
+    ALFINNN, que contento estoy con esto
+
+    GRACIAS AL QUE HAYA LEIDO ESTO. y feliz año nuevo.

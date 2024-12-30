@@ -33,6 +33,7 @@ class ProductoIndumentaria(Base):
     # Relación con CategoriaOfIndumentaria
     categoria = relationship('CategoriaOfIndumentaria', back_populates='productos')
     variantes = relationship('ProductoIndumentariaVariante', back_populates='producto', cascade='all, delete-orphan')
+    imagenes = relationship("ImagenProducto", back_populates="producto")
 
 # Tabla ProductoIndumentariaVariante
 class ProductoIndumentariaVariante(Base):
@@ -49,43 +50,14 @@ class ProductoIndumentariaVariante(Base):
 
 
 
-# class GetProducto:
+class ImagenProducto(Base):
+    __tablename__ = 'ImagenProductos'
 
-#     def __init__(self, session: sessionmaker):
-    
-#         self.session: sessionmaker = session
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    imagen = Column(String(250), nullable=False)
+    idProductoIndumentaria = Column(Integer, ForeignKey('ProductoIndumentaria.id'))
 
-#     def getProductoInDb(self, id: int):
-#         # cliente = self.session.query(ProductoIndumentaria).filter(ProductoIndumentaria.id == self.id, ProductoIndumentariaVariante.idProductoIndumentaria == self.id).first()
-#         producto = self.session.query(ProductoIndumentaria).filter(ProductoIndumentaria.id == id, ProductoIndumentaria.variantes.any(ProductoIndumentariaVariante.idProductoIndumentaria == id)).first()
-#         if producto:
-#             productMappeado = {
-#         "id": producto.id,
-#         "nombre": producto.nombre,
-#         "precio": float(producto.precio),  # Convertir a float si es DECIMAL
-#         "descripcion": producto.descripcion,
-#         "variantes": [
-#             {
-#                 "id": variante.id,
-#                 "talle": variante.talle,
-#                 "color": variante.color,
-#                 "stock": variante.stock,
-#             }
-#             for variante in producto.variantes
-#         ]
-#     }
-#         return productMappeado
-    
-# class ProductHandler():
+    # Relación con ProductoIndumentaria
+    producto = relationship("ProductoIndumentaria", back_populates="imagenes")
 
-#     def __init__(self):
-#         self.conexionDb: ConexionDb = ConexionDb()
-
-#     def crearGetProducto(self):
-#         try:
-#             session : sessionmaker = self.conexionDb.abrirConexion()
-#             return GetProducto(session=session)
-#         except Exception as e:
-#             print(e)
-#             logException(e)
-#             return None
+Base.metadata.create_all(bind=engine)

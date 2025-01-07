@@ -1,0 +1,11 @@
+2025-01-07 15:11:44,590 - INFO - package: mysql.connector.plugins
+2025-01-07 15:11:44,594 - INFO - plugin_name: caching_sha2_password
+2025-01-07 15:11:44,596 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2025-01-07 15:11:45,541 - ERROR - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2025-01-07 15:12:05,202 - INFO - package: mysql.connector.plugins
+2025-01-07 15:12:05,203 - INFO - plugin_name: caching_sha2_password
+2025-01-07 15:12:05,204 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin

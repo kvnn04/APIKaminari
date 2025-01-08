@@ -19,6 +19,7 @@ class ReadProductoIndumentaria:
                         .options(joinedload(ProductoIndumentaria.categoria),joinedload(ProductoIndumentaria.imagenes))  # Carga la relación 'categoria'
                         .all()
                         )
+            print(productos)
             conexionDb.guardarCambiosDb(session)
             if productos:
                 listaProductosMappeados = []     
@@ -55,8 +56,9 @@ class ReadProductoIndumentaria:
             .options(joinedload(ProductoIndumentaria.variantes), joinedload(ProductoIndumentaria.imagenes))  # Cargar variantes
             .filter(ProductoIndumentaria.id == id)
             .first()
-            )            
+            )
             conexionDb.guardarCambiosDb(session)
+            print(producto)
             if producto:
                 productMappeado = {
                     "id": producto.id,

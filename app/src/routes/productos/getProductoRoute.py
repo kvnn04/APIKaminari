@@ -23,6 +23,7 @@ def getProductoAndVariantesInDB(id: int):
     if not id:
         return JSONResponse(content='ID required', status_code=status.HTTP_204_NO_CONTENT)
     producto = ProductHandler().crearGetProducto().getProductoInDbById(id=id)
+    print(producto)
     if not producto:
         return JSONResponse(content='No existe el producto con ese id', status_code=status.HTTP_404_NOT_FOUND)
     return JSONResponse(content=producto, status_code=status.HTTP_200_OK)

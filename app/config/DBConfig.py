@@ -15,5 +15,6 @@ load_dotenv(dotenv_path='dataSensible.env')
 # db = getenv('DB')
 url_msql=getenv('URL_MYSQL')
 # Crear la URL de conexión para MySQL con mysql-connector-python
-engine = create_engine(url=url_msql) # esto requiere de la libreria "mysql-connector-python"
+engine = create_engine(url_msql) # esto requiere de la libreria "mysql-connector-python"
+
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)

@@ -13,6 +13,7 @@ getProductoRoute: APIRouter = APIRouter()
 @getProductoRoute.get('/getAllProducto')
 def getProductoAndVariantesInDB():
     producto = ProductHandler().crearGetProducto().getProductoInDb()
+    print(producto)
     if not producto:
         return JSONResponse(content='Error', status_code=status.HTTP_404_NOT_FOUND)
     return JSONResponse(content=producto, status_code=status.HTTP_200_OK)

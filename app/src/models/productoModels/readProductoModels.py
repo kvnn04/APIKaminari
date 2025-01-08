@@ -19,6 +19,7 @@ class ReadProductoIndumentaria:
                         .options(joinedload(ProductoIndumentaria.categoria),joinedload(ProductoIndumentaria.imagenes))  # Carga la relación 'categoria'
                         .all()
                         )
+            conexionDb.guardarCambiosDb(session)
             if productos:
                 listaProductosMappeados = []     
                 for producto in productos:
@@ -32,7 +33,7 @@ class ReadProductoIndumentaria:
                         }
                     productMappeado['imagenes'].sort()
                     listaProductosMappeados.append(productMappeado)
-
+                
                     
                 return listaProductosMappeados
             return False
@@ -55,6 +56,7 @@ class ReadProductoIndumentaria:
             .filter(ProductoIndumentaria.id == id)
             .first()
             )            
+            conexionDb.guardarCambiosDb(session)
             if producto:
                 productMappeado = {
                     "id": producto.id,
@@ -103,6 +105,7 @@ class ReadProductoIndumentaria:
         )
         .first()
     )
+            conexionDb.guardarCambiosDb(session)
             if producto:
                 productMappeado = {
                     "id": producto.id,
@@ -164,6 +167,7 @@ class ReadProductoIndumentaria:
             # print(precioByProducto)
 
             productos = session.query(ProductoIndumentaria).filter(ProductoIndumentaria.id.in_(ids)).all()
+            conexionDb.guardarCambiosDb(session)
 
             print(productos)
             dataMappeado = []
@@ -186,11 +190,13 @@ class ReadProductoIndumentaria:
     def verifyIdsInDb(self, ids: List[int]):
         conexionDb = ConexionDb()
         session = conexionDb.abrirConexion()
+
         try:
             if not session:
                 return False
 
             productos = session.query(ProductoIndumentaria.id).filter(ProductoIndumentaria.id.in_(ids)).all()
+            conexionDb.guardarCambiosDb(session)
             if productos:
                 respuesta: List[int] = []
                 for i in productos:

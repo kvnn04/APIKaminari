@@ -22,6 +22,7 @@ class ConexionDb:
         except Exception as e:
             # Si ocurre un error, deshacer la transacción
             logException(e)
+            print(e)
             Session.rollback()
             print('error en guardad cambios en la base de datos')
             return None

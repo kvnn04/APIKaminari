@@ -12,6 +12,7 @@ class CrearProductoIndumentariaInDb:
             if not session:
                 return None
             nuevoProducto = ProductoIndumentaria(nombre = nombre, precio = precio, descripcion = descripcion, idCategoria = idCategoria)
+            print(nuevoProducto)
             if nuevoProducto:
                 session.add(nuevoProducto)
                 conexionDb.guardarCambiosDb(session)

@@ -6,7 +6,7 @@
 
 **API Kaminari** es un sistema de gestión para e-commerce de indumentaria, enfocado en la escalabilidad, la seguridad y la aplicación de patrones de diseño.
 
-> 📖 **[Ver Documentación Detallada en Google Docs](https://docs.google.com/document/d/1g31WMuzXVAOoPIyzQsrFJ4_TyTjMczjX3QBy0hOXexs/edit?usp=sharing)** > *Incluye bitácora de desarrollo, diagramas de clases, componentes y análisis de patrones SOLID/GRASP.*
+> 📖 **[Ver Documentación Detallada en Google Docs](https://docs.google.com/document/d/1g31WMuzXVAOoPIyzQsrFJ4_TyTjMczjX3QBy0hOXexs/edit?usp=sharing)** > *Incluye bitácora de desarrollo, componentes y análisis de patrones SOLID/GRASP.*
 
 ## 🚀 Evolución y Arquitectura
 Este proyecto nació como un desafío personal de aprendizaje y evolucionó de un script monolítico hacia una arquitectura limpia basada en:

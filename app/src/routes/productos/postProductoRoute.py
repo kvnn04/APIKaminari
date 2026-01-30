@@ -9,22 +9,33 @@ from fastapi.responses import JSONResponse
 
 postProductoRoute: APIRouter = APIRouter()
 
-@postProductoRoute.post('/createProducto')
+@postProductoRoute.post('/')
 def createProductoInDb(nombre: str, precio: float, descripcion: str, idCategoria: Literal['1','2']):
     print(idCategoria)
-    nuevoProducto: bool = ProductHandler().crearProductoInDb().crearProducto(nombre=nombre, precio=precio, descripcion=descripcion, idCategoria=int(idCategoria))
+    nuevoProducto: bool = ProductHandler().crearProductoInDb().crearProducto(
+        nombre=nombre, 
+        precio=precio, 
+        descripcion=descripcion, 
+        idCategoria=int(idCategoria)
+    )
     print(nuevoProducto)
+    
     if not nuevoProducto:
         return JSONResponse(content='Error', status_code=status.HTTP_409_CONFLICT)
+    
     return JSONResponse(content='Producto creado correctamente', status_code=status.HTTP_201_CREATED)
 
-@postProductoRoute.post('/createProductoVariante')
-def createProductoVarianteInDb(idProductoIndumentaria:int, talle: Literal['s', 'm', 'l', 'xl', 'xxl', 'xxxl'], color: str, stock: int):
-    # verifyIfProductoIndumentariaExiste = ProductHandler().crearIfProductoIndumentaria().consultarIfProductoIndumentaria(id=idProductoIndumentaria)
-    # if not verifyIfProductoIndumentariaExiste:
-    #     return JSONResponse(content='Ese producto no existe', status_code=status.HTTP_404_NOT_FOUND)
-    nuevoProductoVarianteInDb = ProductHandler().crearProductoVarianteInDb().crearProductoVariante(idProductoIndumentaria = idProductoIndumentaria, talle = talle, color = color.lower(), stock = stock)
-    print(nuevoProductoVarianteInDb)
+@postProductoRoute.post('/{idProductoIndumentaria}/variantes')
+def createProductoVarianteInDb(idProductoIndumentaria: int, talle: Literal['s', 'm', 'l', 'xl', 'xxl', 'xxxl'], color: str, stock: int):
+    # El resto de tu lógica se mantiene igual
+    nuevoProductoVarianteInDb = ProductHandler().crearProductoVarianteInDb().crearProductoVariante(
+        idProductoIndumentaria = idProductoIndumentaria, 
+        talle = talle, 
+        color = color.lower(), 
+        stock = stock
+    )
+    
     if not nuevoProductoVarianteInDb:
         return JSONResponse(content='Error al crear la variante', status_code=status.HTTP_409_CONFLICT)
+        
     return JSONResponse(content='Se creo una variante del producto', status_code=status.HTTP_200_OK)

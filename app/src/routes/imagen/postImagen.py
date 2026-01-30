@@ -9,7 +9,7 @@ from app.src.models.imagenModels.controllerImagen import ControllerImagen
 
 postImagenRoute: APIRouter = APIRouter()
 
-@postImagenRoute.post('/subirImagen')
+@postImagenRoute.post('/')
 def crearImagen(url: str = Query(...), id: int = Query(...)):
 
     if not url:
@@ -25,7 +25,7 @@ def crearImagen(url: str = Query(...), id: int = Query(...)):
     
     return True
 
-@postImagenRoute.post('/cambiarImagen')
+@postImagenRoute.put('/')
 def cambiarImagenInDb(idImg: int = Query(...), newUrl: str = Query(...)):
 
     if not newUrl:

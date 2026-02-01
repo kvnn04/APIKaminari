@@ -18,8 +18,6 @@ def crearImagen(url: str = Query(...), id: int = Query(...)):
         return None
     
     nuevaImagen = ControllerImagen.crearInstanciaNuevaImagen().crearImagen(url=url, idProducto=id)
-    print(nuevaImagen)
-
     if not nuevaImagen:
         return None
     
@@ -35,8 +33,7 @@ def cambiarImagenInDb(idImg: int = Query(...), newUrl: str = Query(...)):
     
     # nuevaImagen = ControllerImagen.crearInstanciaNuevaImagen().crearImagen(url=newUrl, idImagen=idImg)
     nuevaImagen = ControllerImagen.crearInstanciaCambiarImagen().cambiarImagenProducto(idImagen=idImg, newUrl=newUrl)
-    print(nuevaImagen)
-
+    
     if not nuevaImagen:
         print('problemas en nueva imagen')
         return None

@@ -3,6 +3,8 @@ from app.src.models.dbConect import ConexionDb
 from app.src.schemas.producto import ProductoIndumentaria, ProductoIndumentariaVariante
 from app.src.utils.hanlerError import logException
 
+
+
 class ModifiStockProductoIndumentariaVarianteInDb:
     def modifiStockVariante(self, idIndumentariaProduct: int, talle: Literal['s', 'm', 'l', 'xl', 'xxl', 'xxxl'], color, nuevoStock: int): 
         conexionDb = ConexionDb()
@@ -56,3 +58,39 @@ class ModifiStockProductoIndumentariaVarianteInDb:
             return None
         finally:
             conexionDb.cerrarConexion(session)
+
+
+class ModifiStockProductoIndumentariaInDb:
+        
+        def modificar_producto_base(self, id_producto: int, nuevo_nombre: str|None = None, nuevo_precio: float|None = None, nueva_descripcion: str|None = None, nuevo_id_categoria: int|None = None):
+            conexionDb = ConexionDb()
+            session = conexionDb.abrirConexion()
+            try:
+                if not session:
+                    return None
+                
+                # Buscamos el producto principal por su ID
+                producto = session.query(ProductoIndumentaria).filter(
+                    ProductoIndumentaria.id == id_producto
+                ).first()
+
+                if producto:
+                    # Solo actualizamos los campos que no vengan como None
+                    if nuevo_nombre is not None:
+                        producto.nombre = nuevo_nombre
+                    if nuevo_precio is not None:
+                        producto.precio = nuevo_precio
+                    if nueva_descripcion is not None:
+                        producto.descripcion = nueva_descripcion
+                    if nuevo_id_categoria is not None:
+                        producto.idCategoria = nuevo_id_categoria
+                    
+                    conexionDb.guardarCambiosDb(session)
+                    return True
+                
+                return False # No se encontró el producto
+            except Exception as e:
+                logException(e)
+                return None
+            finally:
+                conexionDb.cerrarConexion(session)

@@ -1,6 +1,6 @@
 from app.src.models.productoModels.readProductoModels import ReadProductoIndumentaria
 from app.src.models.productoModels.createProducto import CrearProductoIndumentariaInDb, CreateProductoIndumentariaVarianteInDb
-from app.src.models.productoModels.modifyProducto import ModifiStockProductoIndumentariaVarianteInDb
+from app.src.models.productoModels.modifyProducto import ModifiStockProductoIndumentariaInDb, ModifiStockProductoIndumentariaVarianteInDb
 from app.src.models.productoModels.deleteProducto import EliminarProductoIndumentariaInDb
 from abc import ABC, abstractmethod
 
@@ -40,8 +40,11 @@ class ProductHandler(ProductoController):
     def crearProductoVarianteInDb(self) -> CreateProductoIndumentariaVarianteInDb:
         return CreateProductoIndumentariaVarianteInDb()
     
-    def crearModifyStockProductoIndumentaria(self):
+    def crearModifyStockProductoIndumentariaVariante(self):
         return ModifiStockProductoIndumentariaVarianteInDb()
+    
+    def crearModifyStockProductoIndumentaria(self):
+        return ModifiStockProductoIndumentariaInDb()
     
     def crearEliminarProductoIndumentaria(self):
         return EliminarProductoIndumentariaInDb()

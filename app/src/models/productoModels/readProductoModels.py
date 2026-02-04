@@ -18,8 +18,7 @@ class ReadProductoIndumentaria:
                         session.query(ProductoIndumentaria)
                         .options(joinedload(ProductoIndumentaria.categoria),joinedload(ProductoIndumentaria.imagenes))  # Carga la relación 'categoria'
                         .all()
-                        )
-            print(productos)
+                        )   
             conexionDb.guardarCambiosDb(session)
             if productos:
                 listaProductosMappeados = []     
@@ -58,7 +57,6 @@ class ReadProductoIndumentaria:
             .first()
             )
             conexionDb.guardarCambiosDb(session)
-            print(producto)
             if producto:
                 productMappeado = {
                     "id": producto.id,
@@ -142,7 +140,6 @@ class ReadProductoIndumentaria:
             ).filter(
                 ProductoIndumentaria.id == id
             ).scalar()
-            print(precioByProducto)
             precioByProducto = float(precioByProducto)
             return precioByProducto
 
@@ -171,13 +168,11 @@ class ReadProductoIndumentaria:
             productos = session.query(ProductoIndumentaria).filter(ProductoIndumentaria.id.in_(ids)).all()
             conexionDb.guardarCambiosDb(session)
 
-            print(productos)
             dataMappeado = []
             for i in productos:
                 data = {'id': i.id, 'nombre': i.nombre, 'precio': float(i.precio)}
                 dataMappeado.append(data)
             
-            print(dataMappeado)
 
             return dataMappeado
 

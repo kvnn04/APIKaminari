@@ -270,3 +270,6 @@ pip install python-multipart
 2026-02-04 11:19:14,343 - INFO - package: mysql.connector.plugins
 2026-02-04 11:19:14,344 - INFO - plugin_name: caching_sha2_password
 2026-02-04 11:19:14,344 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2026-02-04 11:56:57,614 - INFO - package: mysql.connector.plugins
+2026-02-04 11:56:57,616 - INFO - plugin_name: caching_sha2_password
+2026-02-04 11:56:57,616 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin

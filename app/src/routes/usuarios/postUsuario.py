@@ -10,9 +10,6 @@ from app.config.DBConfig import engine
 from app.oauthJWT.controllerJwt import EncodeToken
 from app.src.utils.hanlerError import logException
 
-with engine.connect() as connection:
-    print("Conexión exitosa a la base de datos")
-
 usuarioPostRoute = APIRouter()
 
 @usuarioPostRoute.post('/register')

@@ -17,7 +17,7 @@ class DecodeToken(BaseModel):
     '''
     def decodeToken(self, token: Annotated[str, Depends(oathScheme)]) -> dict:
         try:
-            print(token,'GDDDDDDDDDDDDDDDSF')
+            # print(token,'GDDDDDDDDDDDDDDDSF')
             if token != 'undefined':
                 return decode(
                     token,

@@ -4,8 +4,7 @@ from fastapi import APIRouter, Depends
 from typing import Annotated
 from app.src.depends.decodeJWT import decodeJWTDepends
 
-with engine.connect() as connection:
-    print("Conexión exitosa a la base de datos")
+
 
 getDbRoute: APIRouter = APIRouter()
 

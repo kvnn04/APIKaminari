@@ -6,9 +6,6 @@ from app.src.models.usuarioModels.contollerUsuario import ClienteHandler
 from app.config.DBConfig import engine
 from app.src.depends.decodeJWT import decodeJWTDepends
 
-with engine.connect() as connection:
-    print("Conexión exitosa a la base de datos")
-
 usuarioGetRoute = APIRouter()
 
 @usuarioGetRoute.get('/')

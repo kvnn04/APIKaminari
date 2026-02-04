@@ -20,7 +20,7 @@ class GetCLienteInDB:
                 return None
         except Exception as e:
             logException(e)
-            print(e)
+            # print(e)
             return None
         finally:
             conexionDB.cerrarConexion(session)
@@ -35,7 +35,7 @@ class GetCLienteInDB:
                 return None
         except Exception as e:
             logException(e)
-            print(e)
+            # print(e)
             return None
         finally:
             conexionDB.cerrarConexion(session)
@@ -50,13 +50,13 @@ class GetCLienteInDBForUsenameOrEmail:
                 return None
             
             cliente = session.query(Cliente).filter(or_(Cliente.username == username, Cliente.email == email)).first()
-            print(cliente)
+            # print(cliente)
             if cliente:
                 return True
             return False
         except Exception as e:
             logException(e)
-            print(e)
+            # print(e)
             return None
         finally:
             conexionDB.cerrarConexion(session)

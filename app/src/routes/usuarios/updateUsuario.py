@@ -8,9 +8,6 @@ from fastapi import status
 
 from app.src.utils.hanlerError import logException
 
-with engine.connect() as connection:
-    print("Conexión exitosa a la base de datos")
-
 usuarioUpdateRoute = APIRouter()
 
 @usuarioUpdateRoute.put('/{id}')

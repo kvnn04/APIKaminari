@@ -1,5 +1,5 @@
 from typing import Literal, Annotated
-from fastapi import APIRouter, Query, status
+from fastapi import APIRouter, Depends, Query, status
 from app.config.DBConfig import engine
 from app.src.depends.decodeJWT import decodeJWTDepends
 from app.src.models.productoModels.productoController import ProductHandler
@@ -24,7 +24,14 @@ def crearImagen(url: str = Query(...), id: int = Query(...)):
     return True
 
 @postImagenRoute.put('/')
-def cambiarImagenInDb(idImg: int = Query(...), newUrl: str = Query(...)):
+def cambiarImagenInDb(user: Annotated[dict, Depends(decodeJWTDepends())], idImg: int = Query(...), newUrl: str = Query(...)):
+
+    # 1. Validación de Autorización (siguiendo tu lógica actual)
+    if user['username'] != 'kvnn' and user['pwd'] != 'boka':
+        return JSONResponse(
+            content='No estás autorizado', 
+            status_code=status.HTTP_401_UNAUTHORIZED
+        )
 
     if not newUrl:
         return None

@@ -4,9 +4,7 @@ from fastapi.responses import JSONResponse
 from app.config.DBConfig import engine
 from app.src.depends.decodeJWT import decodeJWTDepends
 from app.src.models.productoModels.productoController import ProductHandler
- 
-with engine.connect() as connection:
-    print("exitosa a la base de datos")
+
 getProductoRoute: APIRouter = APIRouter()
 
 @getProductoRoute.get('/AllProducto')

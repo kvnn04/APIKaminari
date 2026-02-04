@@ -4,9 +4,6 @@ from app.config.DBConfig import engine
 from app.src.depends.decodeJWT import decodeJWTDepends
 from app.src.models.productoModels.productoController import ProductHandler
 from fastapi.responses import JSONResponse
- 
-with engine.connect() as connection:
-    print("Conexión exitosa a la base de datos")
 
 putProductoRoute: APIRouter = APIRouter()
 
